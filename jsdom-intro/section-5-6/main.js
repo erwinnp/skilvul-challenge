@@ -10,3 +10,18 @@ const removeIcon = () => {
   let getImageEl = document.getElementById("icon");
   getImageEl.removeAttribute("src");
 };
+
+const setBackground = () => {
+  let getImageEl = document.getElementById("icon");
+  getImageEl.style.backgroundColor = "green";
+};
+
+const getSize = () => {
+  let getImageEl = document.getElementById("icon");
+  let width = getImageEl.offsetWidth;
+  let height = getImageEl.offsetHeight;
+  let createEl = document.createElement("p");
+  let createText = document.createTextNode(`Icon Size : ${width} X ${height}`);
+  createEl.appendChild(createText);
+  document.getElementById("size__text").appendChild(createEl);
+};
